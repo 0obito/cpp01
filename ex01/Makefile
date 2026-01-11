@@ -2,7 +2,7 @@ COMPILER = c++
 FLAGS = -Wall -Wextra -Werror #-std=c++98#
 SRC = main.cpp Zombie.cpp zombieHorde.cpp
 OBJ = $(SRC:.cpp=.o)
-NAME = Zombie
+NAME = zombieHorde
 
 all: $(NAME)
 

@@ -3,8 +3,8 @@
 int main() {
     int zombiesNum;
 
-    zombiesNum = -1;
-    Zombie* head = zombieHorde(zombiesNum, "Aba Sakafkaf");
+    zombiesNum = 13;
+    Zombie* head = zombieHorde(zombiesNum, "Flan");
     for (int i = 0 ; i < zombiesNum ; i++) {
         head[i].announce();
     }
