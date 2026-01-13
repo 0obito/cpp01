@@ -12,7 +12,7 @@ int main(int ac, char *av[]) {
     std::stringstream buff;
     std::ifstream inputFS(av[1]);
     if (!inputFS.is_open()) {
-        std::cout << "File couldn't be opened" << std::endl;
+        std::cout << "File couldn't be opened for reading purposes" << std::endl;
         return (1);
     }
     buff << inputFS.rdbuf();
@@ -42,6 +42,12 @@ int main(int ac, char *av[]) {
             currentPos = occurence + s1.length();
         }
     }
-    std::cout << result << std::endl;
+    std::ofstream outputFS(filename + ".replace");
+    if (!outputFS.is_open()) {
+        std::cout << "File couldn't be opened for writing purposes" << std::endl;
+        return (1);
+    }
+    outputFS << result;
+    outputFS.close();
     return 0;
 }
